@@ -1,0 +1,25 @@
+server:
+  port: 8080
+  servlet.context-path: /api
+
+debug: true
+
+spring:
+  application.name: test
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/mytest
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate.ddl-auto: create-drop
+
+security:
+  jwt:
+    access:
+      secret: ac9f4196c88e7322aa8024c1b5e908cb7da86bb6c503b1141ba7b3367857e061
+      expiration: 600000  # in milliseconds
